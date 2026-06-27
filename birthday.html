@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كل سنة وأنت طيب يا حبيبي 🎂</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:#0d0508;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  font-family:'Tajawal','Segoe UI',sans-serif;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(244,63,94,0.1) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(244,63,94,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(190,24,93,0.03) 0%, transparent 50%);
+  padding:20px;
+}
+
+/* Stars */
+.stars{
+  position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;
+}
+.star{
+  position:absolute;width:3px;height:3px;
+  background:#fda4af;border-radius:50%;
+  animation:twinkle var(--d) ease-in-out infinite alternate;
+}
+@keyframes twinkle{
+  0%{opacity:0.1;transform:scale(0.8)}
+  100%{opacity:0.8;transform:scale(1.2)}
+}
+
+/* Container */
+.container{
+  position:relative;z-index:1;text-align:center;
+  animation:fadeIn 1s ease-out;
+}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* Title */
+.title{
+  font-family:'Amiri',serif;
+  font-size:clamp(1.4rem,4vw,2.2rem);
+  color:#fecdd3;
+  margin-bottom:6px;
+  letter-spacing:1px;
+}
+.title span{color:#fb7185}
+.subtitle{
+  font-size:clamp(0.8rem,2vw,1rem);
+  color:rgba(255,255,255,0.35);
+  margin-bottom:40px;
+  letter-spacing:2px;
+  font-weight:300;
+}
+
+/* ===== CAKE ===== */
+.plate{
+  position:relative;
+  width:340px;height:30px;
+  background:linear-gradient(135deg,#2a1a1a,#1a0e0e);
+  border-radius:50%;
+  margin:0 auto -10px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.6),inset 0 2px 4px rgba(255,255,255,0.05);
+  border:1px solid rgba(244,63,94,0.08);
+}
+.cake{
+  position:relative;
+  width:300px;
+  margin:0 auto;
+}
+
+/* Bottom tier */
+.tier-bottom{
+  width:300px;height:90px;
+  background:linear-gradient(180deg,#1f0a12 0%,#16070c 50%,#0d0508 100%);
+  border-radius:12px 12px 6px 6px;
+  position:relative;
+  margin:0 auto;
+  border:1px solid rgba(244,63,94,0.12);
+  box-shadow:0 8px 30px rgba(244,63,94,0.06),inset 0 1px 0 rgba(244,63,94,0.05);
+  overflow:hidden;
+}
+.tier-bottom::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    90deg,transparent,transparent 20px,rgba(244,63,94,0.03) 20px,rgba(244,63,94,0.03) 21px
+  );
+}
+
+/* Frosting drip bottom */
+.frosting-bottom{
+  position:absolute;top:-12px;left:-4px;right:-4px;height:24px;
+  background:linear-gradient(180deg,#be185d,#e11d48);
+  border-radius:12px 12px 0 0;
+  filter:blur(0.5px);
+}
+.frosting-bottom::before{
+  content:'';position:absolute;bottom:-6px;left:10%;width:12px;height:10px;
+  background:#e11d48;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow:30px -2px 0 #be185d,70px -1px 0 #e11d48,110px 0 0 #be185d,
+            150px -3px 0 #e11d48,190px -1px 0 #be185d,230px -2px 0 #e11d48,270px 0 0 #be185d;
+}
+
+/* Middle tier */
+.tier-middle{
+  width:240px;height:80px;
+  background:linear-gradient(180deg,#1f0a12 0%,#16070c 50%,#0d0508 100%);
+  border-radius:10px 10px 5px 5px;
+  position:relative;
+  margin:-10px auto 0;
+  border:1px solid rgba(244,63,94,0.12);
+  box-shadow:0 8px 25px rgba(244,63,94,0.05),inset 0 1px 0 rgba(244,63,94,0.05);
+  overflow:hidden;
+  z-index:2;
+}
+.tier-middle::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    90deg,transparent,transparent 15px,rgba(244,63,94,0.03) 15px,rgba(244,63,94,0.03) 16px
+  );
+}
+.frosting-middle{
+  position:absolute;top:-10px;left:-3px;right:-3px;height:20px;
+  background:linear-gradient(180deg,#be185d,#e11d48);
+  border-radius:10px 10px 0 0;
+  filter:blur(0.5px);
+}
+.frosting-middle::before{
+  content:'';position:absolute;bottom:-5px;left:8%;width:10px;height:8px;
+  background:#e11d48;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow:25px -1px 0 #be185d,55px -1px 0 #e11d48,85px 0 0 #be185d,
+            115px -2px 0 #e11d48,145px -1px 0 #be185d,175px -2px 0 #e11d48,205px 0 0 #be185d;
+}
+
+/* Top tier */
+.tier-top{
+  width:180px;height:70px;
+  background:linear-gradient(180deg,#1f0a12 0%,#16070c 50%,#0d0508 100%);
+  border-radius:8px 8px 4px 4px;
+  position:relative;
+  margin:-10px auto 0;
+  border:1px solid rgba(244,63,94,0.12);
+  box-shadow:0 8px 20px rgba(244,63,94,0.04),inset 0 1px 0 rgba(244,63,94,0.05);
+  overflow:hidden;
+  z-index:3;
+}
+.frosting-top{
+  position:absolute;top:-8px;left:-2px;right:-2px;height:16px;
+  background:linear-gradient(180deg,#be185d,#e11d48);
+  border-radius:8px 8px 0 0;
+  filter:blur(0.5px);
+}
+.frosting-top::before{
+  content:'';position:absolute;bottom:-4px;left:5%;width:8px;height:6px;
+  background:#e11d48;border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow:20px -1px 0 #be185d,45px 0 0 #e11d48,70px -1px 0 #be185d,
+            95px -2px 0 #e11d48,120px 0 0 #be185d,145px -1px 0 #e11d48;
+}
+
+/* Heart decoration on top tier */
+.heart-deco{
+  position:absolute;top:4px;left:50%;transform:translateX(-50%);
+  font-size:16px;opacity:0.4;animation:heartPulse 2s ease-in-out infinite;
+}
+@keyframes heartPulse{
+  0%,100%{transform:translateX(-50%) scale(1);opacity:0.4}
+  50%{transform:translateX(-50%) scale(1.15);opacity:0.6}
+}
+
+/* Candles */
+.candles{
+  position:relative;z-index:5;
+  display:flex;justify-content:center;align-items:flex-end;
+  gap:6px;height:100px;margin-bottom:-10px;
+}
+.candle{
+  width:8px;height:var(--h,55px);
+  background:linear-gradient(180deg,#fecdd3,#fda4af,#fb7185);
+  border-radius:4px 4px 2px 2px;
+  position:relative;
+  box-shadow:inset 0 -2px 4px rgba(0,0,0,0.2);
+  animation:candleSway var(--s,3s) ease-in-out infinite alternate;
+  transform-origin:bottom center;
+}
+@keyframes candleSway{
+  0%{transform:rotate(-0.5deg)}
+  100%{transform:rotate(0.5deg)}
+}
+
+/* Candle stripes */
+.candle::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 6px,rgba(255,255,255,0.06) 6px,rgba(255,255,255,0.06) 7px
+  );
+  border-radius:4px 4px 2px 2px;
+}
+
+/* Flame */
+.flame{
+  position:absolute;top:-18px;left:50%;transform:translateX(-50%);
+  width:12px;height:20px;
+  background:radial-gradient(ellipse at 50% 100%, #fbbf24 0%, #f59e0b 30%, #ef4444 60%, transparent 70%);
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation:flicker var(--f,0.4s) ease-in-out infinite alternate;
+  box-shadow:0 0 20px rgba(251,191,36,0.4),0 0 40px rgba(239,68,68,0.2);
+}
+.flame::before{
+  content:'';position:absolute;top:-4px;left:50%;transform:translateX(-50%);
+  width:8px;height:10px;
+  background:radial-gradient(ellipse at 50% 100%, #fef3c7 0%, #fbbf24 50%, transparent 70%);
+  border-radius:50%;
+  animation:flickerInner 0.3s ease-in-out infinite alternate;
+}
+@keyframes flicker{
+  0%{transform:translateX(-50%) scaleY(1) rotate(-1deg);opacity:0.95}
+  25%{transform:translateX(-50%) scaleY(1.05) rotate(1deg);opacity:1}
+  50%{transform:translateX(-50%) scaleY(0.95) rotate(-0.5deg);opacity:0.9}
+  75%{transform:translateX(-50%) scaleY(1.02) rotate(0.5deg);opacity:1}
+  100%{transform:translateX(-50%) scaleY(0.98) rotate(-0.3deg);opacity:0.95}
+}
+@keyframes flickerInner{
+  0%{transform:translateX(-50%) scaleY(1)}
+  100%{transform:translateX(-50%) scaleY(1.2)}
+}
+/* Flame glow */
+.flame::after{
+  content:'';position:absolute;top:-4px;left:50%;transform:translateX(-50%);
+  width:30px;height:30px;
+  background:radial-gradient(circle,rgba(251,191,36,0.15) 0%,transparent 70%);
+  border-radius:50%;
+  animation:glowPulse 1.5s ease-in-out infinite alternate;
+}
+@keyframes glowPulse{
+  0%{transform:translateX(-50%) scale(0.9);opacity:0.6}
+  100%{transform:translateX(-50%) scale(1.1);opacity:1}
+}
+
+/* Number candles - taller */
+.candle-23{
+  width:10px;height:70px;
+  background:linear-gradient(180deg,#fda4af,#e11d48);
+  border-radius:5px 5px 2px 2px;
+}
+.candle-23 .flame{
+  width:14px;height:24px;
+}
+.candle-23 .flame::after{
+  width:36px;height:36px;
+}
+
+/* Number toppers */
+.number-topper{
+  position:absolute;top:-32px;left:50%;transform:translateX(-50%);
+  font-size:22px;font-weight:700;
+  color:#fecdd3;font-family:'Amiri',serif;
+  text-shadow:0 0 20px rgba(251,191,36,0.3),0 0 40px rgba(244,63,94,0.2);
+  letter-spacing:2px;
+  animation:numberGlow 2s ease-in-out infinite alternate;
+}
+@keyframes numberGlow{
+  0%{text-shadow:0 0 15px rgba(251,191,36,0.2),0 0 30px rgba(244,63,94,0.1)}
+  100%{text-shadow:0 0 25px rgba(251,191,36,0.4),0 0 50px rgba(244,63,94,0.3)}
+}
+
+/* Gold decorations */
+.gold-band{
+  position:absolute;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,transparent,rgba(251,191,36,0.2),rgba(251,191,36,0.3),rgba(251,191,36,0.2),transparent);
+  top:40%;
+}
+
+/* Rose decorations on cake */
+.rose-deco{
+  position:absolute;font-size:10px;opacity:0.3;
+  animation:floatRose 4s ease-in-out infinite;
+}
+@keyframes floatRose{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-3px)}
+}
+
+/* Sparkle particles */
+.sparkles-container{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden;
+}
+.sparkle{
+  position:absolute;width:4px;height:4px;
+  background:#fbbf24;border-radius:50%;
+  box-shadow:0 0 6px #fbbf24,0 0 12px rgba(251,191,36,0.3);
+  animation:sparkleFloat var(--d,3s) ease-out infinite;
+}
+@keyframes sparkleFloat{
+  0%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-60px) scale(0)}
+}
+
+/* Message */
+.message{
+  margin-top:50px;
+  font-family:'Amiri',serif;
+  font-size:clamp(1rem,2.5vw,1.4rem);
+  color:rgba(255,255,255,0.5);
+  line-height:2;
+  max-width:500px;
+  animation:messageIn 1.5s ease-out 0.5s both;
+}
+@keyframes messageIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.message strong{color:#fb7185;font-weight:700}
+
+/* Back button */
+.back-btn{
+  margin-top:40px;display:inline-flex;align-items:center;gap:8px;
+  padding:12px 28px;border-radius:12px;
+  border:1px solid rgba(244,63,94,0.2);
+  background:rgba(244,63,94,0.06);
+  color:#fda4af;font-size:0.85rem;
+  cursor:pointer;transition:all 0.3s;
+  font-family:'Tajawal',sans-serif;text-decoration:none;
+  animation:messageIn 1.5s ease-out 1s both;
+}
+.back-btn:hover{
+  background:rgba(244,63,94,0.12);
+  border-color:rgba(244,63,94,0.4);
+  transform:translateY(-1px);
+}
+
+/* Confetti */
+.confetti-container{position:fixed;inset:0;pointer-events:none;z-index:10}
+.confetti{
+  position:absolute;top:-10px;width:8px;height:8px;
+  border-radius:2px;
+  animation:confettiFall var(--d,3s) linear infinite;
+}
+@keyframes confettiFall{
+  0%{transform:translateY(-10px) rotate(0deg);opacity:1}
+  100%{transform:translateY(100vh) rotate(720deg);opacity:0}
+}
+
+/* Responsive */
+@media(max-width:500px){
+  .plate{width:260px;height:22px}
+  .cake{width:230px}
+  .tier-bottom{width:230px;height:70px}
+  .tier-middle{width:180px;height:65px}
+  .tier-top{width:140px;height:55px}
+  .candle{width:6px;--h:40px}
+  .candle-23{width:8px;height:55px}
+  .number-topper{font-size:17px;top:-28px}
+  .frosting-bottom::before{display:none}
+  .frosting-middle::before{display:none}
+  .frosting-top::before{display:none}
+  .candles{gap:4px;height:75px}
+  .flame{width:10px;height:16px;top:-15px}
+  .candle-23 .flame{width:12px;height:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="confetti-container" id="confetti"></div>
+
+<div class="container">
+  <div class="title">كل سنة <span>وأنت طيب</span> يا حبيبي 🎂</div>
+  <div class="subtitle">— ٢٣ سنة من النقاء والجمال —</div>
+
+  <!-- Cake -->
+  <div class="cake">
+    <!-- Candles with numbers "2" and "3" -->
+    <div class="candles" id="candles"></div>
+
+    <!-- Top tier -->
+    <div class="tier-top">
+      <div class="frosting-top"></div>
+      <div class="gold-band" style="top:50%"></div>
+    </div>
+
+    <!-- Middle tier -->
+    <div class="tier-middle">
+      <div class="frosting-middle"></div>
+      <div class="gold-band" style="top:45%"></div>
+    </div>
+
+    <!-- Bottom tier -->
+    <div class="tier-bottom">
+      <div class="frosting-bottom"></div>
+      <div class="gold-band" style="top:45%"></div>
+    </div>
+  </div>
+
+  <!-- Plate -->
+  <div class="plate"></div>
+
+  <!-- Message -->
+  <div class="message">
+    كل سنة وأنت أغلى إنسان في حياتي 🤍<br>
+    <strong>بحبك</strong>
+  </div>
+
+  <a href="./" class="back-btn">← الرجوع للصفحة الرئيسية</a>
+</div>
+
+<script>
+// Stars
+const starsContainer = document.getElementById('stars');
+for(let i=0;i<80;i++){
+  const star=document.createElement('div');
+  star.className='star';
+  star.style.left=Math.random()*100+'%';
+  star.style.top=Math.random()*100+'%';
+  star.style.setProperty('--d',(1.5+Math.random()*3)+'s');
+  star.style.animationDelay=Math.random()*3+'s';
+  star.style.width=star.style.height=(1+Math.random()*2)+'px';
+  starsContainer.appendChild(star);
+}
+
+// Candles with numbers
+const candlesContainer = document.getElementById('candles');
+const numbers = ['2','3'];
+for(let i=0;i<3;i++){
+  const candle=document.createElement('div');
+  candle.className='candle candle-23';
+  candle.style.setProperty('--h',(55+Math.random()*20)+'px');
+  candle.style.setProperty('--s',(2.5+Math.random()*1.5)+'s');
+  candle.style.height=candle.style.getPropertyValue('--h');
+  candlesContainer.appendChild(candle);
+}
+// Number toppers for the 2 middle candles
+const candleEls = candlesContainer.querySelectorAll('.candle');
+candleEls.forEach((c,i)=>{
+  if(i===0){
+    const topper=document.createElement('div');
+    topper.className='number-topper';
+    topper.textContent='2';
+    c.appendChild(topper);
+  }else if(i===1){
+    const topper=document.createElement('div');
+    topper.className='number-topper';
+    topper.textContent='3';
+    c.appendChild(topper);
+  }
+  // Flame
+  const flame=document.createElement('div');
+  flame.className='flame';
+  flame.style.setProperty('--f',(0.3+Math.random()*0.2)+'s');
+  c.appendChild(flame);
+});
+
+// Confetti
+const confettiContainer=document.getElementById('confetti');
+const confettiColors=['#f43f5e','#e11d48','#fb7185','#fecdd3','#fbbf24','#f59e0b','#fda4af'];
+for(let i=0;i<60;i++){
+  const c=document.createElement('div');
+  c.className='confetti';
+  c.style.left=Math.random()*100+'%';
+  c.style.background=confettiColors[Math.floor(Math.random()*confettiColors.length)];
+  c.style.setProperty('--d',(2+Math.random()*4)+'s');
+  c.style.animationDelay=Math.random()*5+'s';
+  c.style.width=(4+Math.random()*6)+'px';
+  c.style.height=(4+Math.random()*6)+'px';
+  c.style.borderRadius=Math.random()>0.5?'50%':'2px';
+  confettiContainer.appendChild(c);
+}
+
+// Sparkles near candles
+const sparklesContainer=document.createElement('div');
+sparklesContainer.className='sparkles-container';
+document.querySelector('.cake').appendChild(sparklesContainer);
+for(let i=0;i<15;i++){
+  const s=document.createElement('div');
+  s.className='sparkle';
+  s.style.left=(30+Math.random()*40)+'%';
+  s.style.top=(-10+Math.random()*30)+'%';
+  s.style.setProperty('--d',(2+Math.random()*2)+'s');
+  s.style.animationDelay=Math.random()*3+'s';
+  sparklesContainer.appendChild(s);
+}
+</script>
+</body>
+</html>
